@@ -1,59 +1,98 @@
 body {
-    background-color: lightblue;
+background-color: lightblue;
 }
 
 header {
-    background-color: #5b2396;
-    color: white;
+ background-color: #5b2396;
+color: white;
 }
 
 main {
-    background-color: lightblue;
+ background-color: lightblue;
 }
 
 footer {
-    background-color: #5b2396;
-    color: white;
+  background-color: #5b2396;
+  color: white;
 }
 
 h1 {
-    color: white;
-    text-shadow: 3px 3px 0px purple;
+  color: white;
+ text-shadow: 3px 3px 0px purple;
 }
 nav {
-    background-color: orange;
-    text-align: center;
-    padding: 10px;
+ background-color: orange;
+text-align: center;
+ padding: 10px;
 }
 .menu {
-    background-color: purple;
-    color: white;
-    padding: 10px;
-    margin: 5px;
+background-color: purple;
+color: white;
+ padding: 10px;
+ margin: 5px;
+ transition: background-color 0.3s;
 }
 
 .menu:hover {
     background-color: orange;
 }
 section {
-    background-color: orange;
-    border: 2px solid purple;
-    border-radius: 16px;
-    padding: 20px;
-    margin: 20px;
+background-color: orange;
+border: 2px solid purple;
+border-radius: 16px;
+padding: 20px;
+margin: 20px;
 }
 img {
-    border: 3px solid purple;
-    border-radius: 16px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+border: 3px solid purple;
+border-radius: 16px;
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+img:hover {
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6);
 }
 .titulo {
-    color: white;
-    text-align: center;
-    text-shadow: 3px 3px 0px purple;
+color: white;
+text-align: center;
+text-shadow: 3px 3px 0px purple;
 }
 .tabla {
-    width: 100%;
-    border: 2px solid purple;
-    border-radius: 16px;
+ width: 100%;
+ border: 2px solid purple;
+border-radius: 16px;
+margin: 20px;
+}
+.titulo {
+ color: white;
+text-align: center;
+text-shadow: 3px 3px 0px purple;
+ animation-name: aparecer;
+ animation-duration: 1s;
+}
+@keyframes aparecer {
+ 0% {
+  opacity: 0;
+ }
+ 100% {
+ opacity: 1;
+  }
+}
+
+.imagen-pokemon {
+ border: 3px solid purple;
+ border-radius: 16px;
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+ animation-name: imagen;
+animation-duration: 1s;
+}
+
+@keyframes imagen {
+    0% {
+   opacity: 0;
+  transform: translateY(-50px);
+  }
+100% {
+  opacity: 1;
+ transform: translateY(0);
+ }
 }
