@@ -1,0 +1,59 @@
+body {
+    background-color: lightblue;
+}
+
+header {
+    background-color: #5b2396;
+    color: white;
+}
+
+main {
+    background-color: lightblue;
+}
+
+footer {
+    background-color: #5b2396;
+    color: white;
+}
+
+h1 {
+    color: white;
+    text-shadow: 3px 3px 0px purple;
+}
+nav {
+    background-color: orange;
+    text-align: center;
+    padding: 10px;
+}
+.menu {
+    background-color: purple;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+}
+
+.menu:hover {
+    background-color: orange;
+}
+section {
+    background-color: orange;
+    border: 2px solid purple;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 20px;
+}
+img {
+    border: 3px solid purple;
+    border-radius: 16px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.titulo {
+    color: white;
+    text-align: center;
+    text-shadow: 3px 3px 0px purple;
+}
+.tabla {
+    width: 100%;
+    border: 2px solid purple;
+    border-radius: 16px;
+}
