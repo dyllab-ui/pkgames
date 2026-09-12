@@ -1,0 +1,32 @@
+body {
+    background-color: #f3e8ff;
+}
+article {
+    background-color: lightblue;
+    border: 2px solid purple;
+    border-radius: 16px;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+article h2 {
+    color: purple;
+    text-align: center;
+}
+
+article p {
+    text-align: center;
+}
+
+.imagen-eevee {
+    border: 3px solid purple;
+    border-radius: 16px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    animation-name: aparecer;
+    animation-duration: 1s;
+}
+
+article:hover {
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+}
