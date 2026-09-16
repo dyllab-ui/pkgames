@@ -18,7 +18,46 @@ section h1 {
     color: white;
     text-shadow: 3px 3px 0px orange;
 }
+.titulo {
+    animation-name: aparecer;
+    animation-duration: 1s;
+}
 
+section h1 {
+    animation-name: aparecer;
+    animation-duration: 1s;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.titulo {
+    animation-name: aparecer;
+    animation-duration: 1s;
+}
+
+section h1 {
+    animation-name: aparecer;
+    animation-duration: 1s;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
 .rol h2 {
     color: white;
     text-shadow: 2px 2px 0px orange;
@@ -574,4 +613,14 @@ footer {
         left: 0px;
         top: 100px;
     }
+}
+.pokemon-imagen .imagen-hover {
+    width: 400px !important;
+    height: 350px !important;
+}
+
+.pokemon-imagen .imagen-hover img {
+    width: 400px !important;
+    height: 350px !important;
+    object-fit: cover;
 }
