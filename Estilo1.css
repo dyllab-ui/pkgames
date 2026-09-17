@@ -1,6 +1,4 @@
-/* ================================================= */
-/* RESET BÁSICO                                       */
-/* ================================================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -19,11 +17,9 @@ body {
   padding-bottom: 60px;
 }
 
-/* ================================================= */
-/* PANTALLA DE CARGA                                  */
-/* Se muestra al abrir/recargar la página y se oculta */
-/* sola cuando la barra llega al 100%                 */
-/* ================================================= */
+
+/* PANTALLA DE CARGA */
+
 #pantalla-carga {
   position: fixed;
   top: 0;
@@ -31,6 +27,10 @@ body {
   width: 100%;
   height: 100%;
   background-color: #000000;
+  background-image: url("cosas imagenes/pokemon-pixel-art-wallpaper-preview.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   z-index: 9999;
   display: flex;
   justify-content: center;
@@ -50,30 +50,6 @@ body {
   max-width: 500px;
 }
 
-/* ================================================= */
-/* EXPLICACIÓN: cómo se mueve el GIF y se llena la    */
-/* barra, TODO controlado desde este CSS (no desde    */
-/* JavaScript, para no usar ".style" en ningún momento)*/
-/*                                                      */
-/* - "#gif-carga" y ".barra-carga-relleno" tienen cada */
-/*   uno su propia animación (@keyframes), con LA MISMA */
-/*   duración (2s), para que se muevan sincronizados.   */
-/* - El GIF usa "left" en PORCENTAJE (0% a 100%) en vez */
-/*   de píxeles, porque está dentro de un contenedor    */
-/*   con "position: relative" (.barra-carga-contenedor)*/
-/*   entonces el 100% equivale al ancho total de la     */
-/*   barra, sin importar el tamaño de pantalla.         */
-/* - "animation-fill-mode: forwards" (la palabra        */
-/*   "forwards" al final de la línea "animation")       */
-/*   hace que, al terminar la animación, el elemento     */
-/*   se quede en su posición final (100%) en vez de      */
-/*   regresar a como estaba al inicio.                   */
-/* - El JavaScript (al final del HTML) NO mueve nada:    */
-/*   solo espera los mismos 2 segundos y luego le agrega */
-/*   la clase ".oculta" a la pantalla de carga para que  */
-/*   desaparezca. Si cambias la duración aquí (2s),      */
-/*   cambia también el número en el JavaScript.          */
-/* ================================================= */
 #gif-carga {
   position: absolute;
   bottom: 24px;
@@ -101,22 +77,19 @@ body {
   animation: llenar-barra 2s linear forwards;
 }
 
-/* Hace que el ancho de la barra pase de 0% a 100% */
+
 @keyframes llenar-barra {
   from { width: 0%; }
   to   { width: 100%; }
 }
 
-/* Hace que el GIF se desplace de la izquierda (0%) */
-/* hacia la derecha (100%) del contenedor            */
 @keyframes mover-gif {
   from { left: 0%; }
   to   { left: 100%; }
 }
 
-/* ================================================= */
-/* FONDO DE PANTALLA COMPLETA                         */
-/* ================================================= */
+
+/* FONDO DE PANTALLA COMPLETA */
 .fondo {
   position: fixed;
   top: 0;
@@ -130,9 +103,8 @@ body {
   z-index: -1;
 }
 
-/* ================================================= */
-/* TITULO (mismo estilo que la página 1)              */
-/* ================================================= */
+/* TITULO */
+
 .titulo-cuadro {
   position: relative;
   padding-top: 30px;
@@ -164,9 +136,7 @@ body {
   text-shadow: 2px 2px 0 #000, 4px 4px 6px rgba(0, 0, 0, 0.8);
 }
 
-/* ================================================= */
-/* CAJA DE INFORMACIÓN GENERAL                        */
-/* ================================================= */
+/* CAJA DE INFORMACIÓN  */
 .info-caja {
   background-color: rgba(0, 0, 0, 0.65);
   border: 3px solid #ffffff;
@@ -182,9 +152,8 @@ body {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
-/* ================================================= */
 /* MENU DE 3 BOTONES DEBAJO DEL TITULO                */
-/* ================================================= */
+
 .menu-cuadro {
   display: flex;
   justify-content: center;
@@ -211,9 +180,7 @@ body {
   background-color: rgba(30, 30, 30, 0.9);
 }
 
-/* ================================================= */
 /* CONTENEDOR GENERAL DEL CONTENIDO                   */
-/* ================================================= */
 .contenido {
   width: 85%;
   max-width: 1400px;
@@ -237,9 +204,9 @@ body {
   width: 100%;
 }
 
-/* ================================================= */
-/* TABLA DE IMÁGENES: 1 FILA x 6 COLUMNAS             */
-/* ================================================= */
+
+/* TABLA DE IMÁGENES*/
+
 .tabla-imagenes {
   width: 100%;
   border-collapse: separate;
@@ -258,9 +225,8 @@ body {
 }
 }
 
-/* ================================================= */
 /* ESPACIO PARA LAS IMÁGENES DENTRO DE CADA CELDA     */
-/* ================================================= */
+
 .tabla-imagenes img {
   width: 100% !important;
   max-width: 220px !important;
@@ -272,15 +238,18 @@ body {
   display: block;
   margin: 0 auto;
 }
+.etiqueta-imagen {
+  background-color: rgba(0, 0, 0, 0.65);
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  padding: 6px 10px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  text-align: center;
+  margin-bottom: 8px;
+}
 
-/* ================================================= */
-/* ANIMACIÓN DE APARICIÓN DE LAS IMÁGENES             */
-/* Cada imagen entra deslizándose desde un lateral    */
-/* hasta acomodarse en el centro de su celda.         */
-/* Las columnas impares entran desde la izquierda y   */
-/* las pares desde la derecha, con un pequeño retraso */
-/* escalonado para un efecto en cascada.              */
-/* ================================================= */
 .tabla-imagenes img {
   opacity: 0;
   animation-name: aparecer-imagen;
@@ -316,9 +285,8 @@ body {
   100% { transform: translateX(0); opacity: 1; }
 }
 
-/* ================================================= */
-/* REFERENCIAS AL FINAL                               */
-/* ================================================= */
+
+/* REFERENCIAS AL FINAL */
 .referencias {
   width: 100%;
   margin-top: 20px;
@@ -329,9 +297,8 @@ body {
   margin-bottom: 6px;
 }
 
-/* ================================================= */
-/* RESPONSIVE                                         */
-/* ================================================= */
+
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .titulo-container {
     width: 90%;
