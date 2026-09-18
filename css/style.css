@@ -1,32 +1,724 @@
 body {
-    background-color: #f3e8ff;
+    background-image: url("../Resource/zona.jfif");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #fff8f0;
+    font-family: "Comic Sans MS", sans-serif;
+    margin: 0;
+    color: #4a405a;
 }
-article {
-    background-color: lightblue;
-    border: 2px solid purple;
-    border-radius: 16px;
+header {
+    background-color: rgba(255, 248, 240, 0.95);
+    color: #4a405a;
+    text-align: center;
+    padding: 20px;
+    border: 3px solid #d8b4e2;
+    border-radius: 0px 0px 20px 20px;
+    animation: aparecer 1s;
+}
+header p {
+    font-size: 18px;
+    font-weight: bold;
+}
+.titulo {
+    color: #9d7bb5;
+    font-size: 55px;
+    text-shadow: 3px 3px 0px #f5b6d2;
+    animation: aparecer 1s;
+}
+nav {
+    background-color: rgba(255, 248, 240, 0.95);
+    text-align: center;
     padding: 15px;
-    margin: 15px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    margin: 10px 0px;
+    border: 2px solid #d8b4e2;
 }
-
-article h2 {
-    color: purple;
+.menu {
+    background-color: #d8b4e2;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.menu:hover {
+    background-color: #f5b6d2;
+    transform: scale(1.1);
+}
+.menu + .menu {
+    margin-left: 10px;
+}
+main {
+    padding: 10px;
+}
+section {
+    background-color: rgba(255, 248, 240, 0.94);
+    border: 3px solid #d8b4e2;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 25px;
+    box-shadow: 5px 5px 15px rgba(74, 64, 90, 0.25);
+    transition: transform 0.3s;
+}
+section:hover {
+    transform: translateY(-5px);
+}
+section h1 {
+    color: #9d7bb5;
+    text-align: center;
+    text-shadow: 2px 2px 0px #f5b6d2;
+    animation: aparecer 1s;
+}
+section > p {
+    color: #4a405a;
+    font-size: 18px;
     text-align: center;
 }
-
-article p {
+.rueda-evoluciones {
+    position: relative;
+    width: 700px;
+    height: 640px;
+    margin: 40px auto;
+}
+.rueda-evoluciones input {
+    display: none;
+}
+.metodo {
+    position: absolute;
+    box-sizing: border-box;
+    width: 146px;
+    height: 130px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 3px solid #d8b4e2;
+    border-radius: 15px;
+    color: #4a405a;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.4s, background-color 0.4s, box-shadow 0.4s;
+}
+.metodo img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border: none;
+    box-shadow: none;
+}
+.metodo p {
+    margin: 5px;
+    font-weight: bold;
+}
+.metodo:hover {
+    transform: scale(1.15);
+    background-color: #f5e6f8;
+    box-shadow: 0px 0px 20px #d8b4e2;
+}
+.rueda-evoluciones input:checked + .metodo {
+    transform: scale(1.15);
+    animation: brillo-metodo 1s infinite alternate;
+}
+.metodo::before {
+    content: "✦";
+    color: #9d7bb5;
+    margin-right: 5px;
+}
+.metodo::after {
+    content: " ✦";
+    color: #9d7bb5;
+}
+.eterna {
+    top: 5px;
+    left: 277px;
+    border-color: #c9a27e;
+}
+.agua {
+    top: 64px;
+    left: 438px;
+    border-color: #9dcef0;
+}
+.amistad {
+    top: 212px;
+    left: 523px;
+    border-color: #f5b6d2;
+}
+.trueno {
+    top: 380px;
+    left: 494px;
+    border-color: #f5d76e;
+}
+.dia {
+    top: 490px;
+    left: 363px;
+    border-color: #d8b4e2;
+}
+.fuego {
+    top: 490px;
+    left: 192px;
+    border-color: #f2a77f;
+}
+.noche {
+    top: 380px;
+    left: 61px;
+    border-color: #a9a7d8;
+}
+.hoja {
+    top: 212px;
+    left: 31px;
+    border-color: #b7d99a;
+}
+.hielo {
+    top: 64px;
+    left: 116px;
+    border-color: #b9e8f5;
+}
+.rueda-evoluciones input:checked + .agua {
+    background-color: #9dcef0;
+}
+.rueda-evoluciones input:checked + .amistad {
+    background-color: #f5b6d2;
+}
+.rueda-evoluciones input:checked + .trueno {
+    background-color: #ffe58a;
+}
+.rueda-evoluciones input:checked + .dia {
+    background-color: #d8b4e2;
+}
+.rueda-evoluciones input:checked + .fuego {
+    background-color: #ffb38a;
+}
+.rueda-evoluciones input:checked + .noche {
+    background-color: #a9a7d8;
+}
+.rueda-evoluciones input:checked + .hoja {
+    background-color: #b7d99a;
+}
+.rueda-evoluciones input:checked + .hielo {
+    background-color: #b9e8f5;
+}
+.rueda-evoluciones input:checked + .eterna {
+    background-color: #e8c9a8;
+    animation: brillo-metodo 1s infinite alternate;
+}
+.eevee-centro {
+    position: absolute;
+    top: 227px;
+    left: 250px;
+    width: 200px;
     text-align: center;
 }
-
-.imagen-eevee {
-    border: 3px solid purple;
-    border-radius: 16px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    animation-name: aparecer;
-    animation-duration: 1s;
+.eevee-centro img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    border: 3px solid #d8b4e2;
+    border-radius: 50%;
+    background-color: white;
+}
+.eevee-centro .eevee {
+    animation: flotar 3s ease-in-out infinite;
+}
+.eevee-centro .vaporeon,
+.eevee-centro .jolteon,
+.eevee-centro .flareon,
+.eevee-centro .espeon,
+.eevee-centro .umbreon,
+.eevee-centro .leafeon,
+.eevee-centro .glaceon,
+.eevee-centro .sylveon {
+    display: none;
+}
+.eevee-centro h2 {
+    color: #9d7bb5;
+    text-shadow: 2px 2px #f5b6d2;
+}
+.nombre-vaporeon,
+.nombre-jolteon,
+.nombre-flareon,
+.nombre-espeon,
+.nombre-umbreon,
+.nombre-leafeon,
+.nombre-glaceon,
+.nombre-sylveon {
+    display: none;
+}
+#agua:checked ~ .eevee-centro .eevee {
+    display: none;
+}
+#agua:checked ~ .eevee-centro .vaporeon {
+    display: inline-block;
+    border-color: #9dcef0;
+    animation: transformacion 0.8s, flotar 3s ease-in-out 0.8s infinite;
+}
+#agua:checked ~ .eevee-centro .nombre-eevee {
+    display: none;
+}
+#agua:checked ~ .eevee-centro .nombre-vaporeon {
+    display: block;
+    animation: aparecer 0.7s;
+}
+#trueno:checked ~ .eevee-centro .eevee {
+    display: none;
+}
+#trueno:checked ~ .eevee-centro .jolteon {
+    display: inline-block;
+    border-color: #f5d76e;
+    animation: transformacion 0.8s, flotar 3s ease-in-out 0.8s infinite;
+}
+#trueno:checked ~ .eevee-centro .nombre-eevee {
+    display: none;
+}
+#trueno:checked ~ .eevee-centro .nombre-jolteon {
+    display: block;
+    animation: aparecer 0.7s;
+}
+#fuego:checked ~ .eevee-centro .eevee {
+    display: none;
+}
+#fuego:checked ~ .eevee-centro .flareon {
+    display: inline-block;
+    border-color: #f2a77f;
+    animation: transformacion 0.8s, flotar 3s ease-in-out 0.8s infinite;
+}
+#fuego:checked ~ .eevee-centro .nombre-eevee {
+    display: none;
+}
+#fuego:checked ~ .eevee-centro .nombre-flareon {
+    display: block;
+    animation: aparecer 0.7s;
+}
+#dia:checked ~ .eevee-centro .eevee {
+    display: none;
+}
+#dia:checked ~ .eevee-centro .espeon {
+    display: inline-block;
+    border-color: #d8b4e2;
+    animation: transformacion 0.8s, flotar 3s ease-in-out 0.8s infinite;
+}
+#dia:checked ~ .eevee-centro .nombre-eevee {
+    display: none;
+}
+#dia:checked ~ .eevee-centro .nombre-espeon {
+    display: block;
+    animation: aparecer 0.7s;
+}
+#noche:checked ~ .eevee-centro .eevee {
+    display: none;
+}
+#noche:checked ~ .eevee-centro .umbreon {
+    display: inline-block;
+    border-color: #a9a7d8;
+    animation: transformacion 0.8s, flotar 3s ease-in-out 0.8s infinite;
+}
+#noche:checked ~ .eevee-centro .nombre-eevee {
+    display: none;
+}
+#noche:checked ~ .eevee-centro .nombre-umbreon {
+    display: block;
+    animation: aparecer 0.7s;
+}
+#hoja:checked ~ .eevee-centro .eevee {
+    display: none;
+}
+#hoja:checked ~ .eevee-centro .leafeon {
+    display: inline-block;
+    border-color: #b7d99a;
+    animation: transformacion 0.8s, flotar 3s ease-in-out 0.8s infinite;
+}
+#hoja:checked ~ .eevee-centro .nombre-eevee {
+    display: none;
+}
+#hoja:checked ~ .eevee-centro .nombre-leafeon {
+    display: block;
+    animation: aparecer 0.7s;
+}
+#hielo:checked ~ .eevee-centro .eevee {
+    display: none;
+}
+#hielo:checked ~ .eevee-centro .glaceon {
+    display: inline-block;
+    border-color: #b9e8f5;
+    animation: transformacion 0.8s, flotar 3s ease-in-out 0.8s infinite;
+}
+#hielo:checked ~ .eevee-centro .nombre-eevee {
+    display: none;
+}
+#hielo:checked ~ .eevee-centro .nombre-glaceon {
+    display: block;
+    animation: aparecer 0.7s;
+}
+#amistad:checked ~ .eevee-centro .eevee {
+    display: none;
+}
+#amistad:checked ~ .eevee-centro .sylveon {
+    display: inline-block;
+    border-color: #f5b6d2;
+    animation: transformacion 0.8s, flotar 3s ease-in-out 0.8s infinite;
+}
+#amistad:checked ~ .eevee-centro .nombre-eevee {
+    display: none;
+}
+#amistad:checked ~ .eevee-centro .nombre-sylveon {
+    display: block;
+    animation: aparecer 0.7s;
+}
+.informacion {
+    text-align: center;
+}
+.informacion > div {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.97);
+    color: #4a405a;
+    border: 3px solid #d8b4e2;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 700px;
+    box-shadow: 0px 5px 20px rgba(74, 64, 90, 0.3);
+}
+.info-eevee {
+    display: block !important;
+}
+.evoluciones:has(#agua:checked) .info-eevee,
+.evoluciones:has(#trueno:checked) .info-eevee,
+.evoluciones:has(#fuego:checked) .info-eevee,
+.evoluciones:has(#dia:checked) .info-eevee,
+.evoluciones:has(#noche:checked) .info-eevee,
+.evoluciones:has(#hoja:checked) .info-eevee,
+.evoluciones:has(#hielo:checked) .info-eevee,
+.evoluciones:has(#amistad:checked) .info-eevee {
+    display: none !important;
+}
+.evoluciones:has(#agua:checked) .info-agua,
+.evoluciones:has(#trueno:checked) .info-trueno,
+.evoluciones:has(#fuego:checked) .info-fuego,
+.evoluciones:has(#dia:checked) .info-dia,
+.evoluciones:has(#noche:checked) .info-noche,
+.evoluciones:has(#hoja:checked) .info-hoja,
+.evoluciones:has(#hielo:checked) .info-hielo,
+.evoluciones:has(#amistad:checked) .info-amistad {
+    display: block;
+    animation: aparecer-informacion 0.8s;
+}
+.evoluciones:has(#agua:checked) .info-agua {
+    border-color: #9dcef0;
+}
+.evoluciones:has(#trueno:checked) .info-trueno {
+    border-color: #f5d76e;
+}
+.evoluciones:has(#fuego:checked) .info-fuego {
+    border-color: #f2a77f;
+}
+.evoluciones:has(#dia:checked) .info-dia {
+    border-color: #d8b4e2;
+}
+.evoluciones:has(#noche:checked) .info-noche {
+    border-color: #a9a7d8;
+}
+.evoluciones:has(#hoja:checked) .info-hoja {
+    border-color: #b7d99a;
+}
+.evoluciones:has(#hielo:checked) .info-hielo {
+    border-color: #b9e8f5;
+}
+.evoluciones:has(#amistad:checked) .info-amistad {
+    border-color: #f5b6d2;
+}
+.informacion h2 {
+    color: #9d7bb5;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px #f5b6d2;
+}
+.informacion h2::before {
+    content: "✦ ";
+}
+.informacion h2::after {
+    content: " ✦";
+}
+.informacion p {
+    font-size: 17px;
+    line-height: 1.5;
+}
+.informacion p:first-of-type {
+    background-color: #f7f0fa;
+    border-left: 5px solid #d8b4e2;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.informacion p:not(:first-of-type) {
+    display: inline-block;
+    background-color: #fff8e8;
+    border: 2px solid #ead49a;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 5px;
+    min-width: 130px;
+}
+.informacion strong {
+    color: #80629a;
+}
+footer {
+    background-color: rgba(255, 248, 240, 0.95);
+    color: #4a405a;
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid #d8b4e2;
+    margin-top: 30px;
+    font-weight: bold;
+}
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes transformacion {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) rotate(-20deg);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.2) rotate(10deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+@keyframes flotar {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+@keyframes brillo-metodo {
+    from {
+        box-shadow: 0px 0px 15px #d8b4e2;
+    }
+    to {
+        box-shadow: 0px 0px 35px white;
+    }
+}
+@keyframes aparecer-informacion {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.eevee-animado {
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    width: 100px;
+    height: 100px;
+    z-index: 20;
+    animation: recorrido-eevee 12s linear infinite;
 }
 
-article:hover {
-    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+.eevee-animado img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.anim-eevee {
+    animation: evolucion-eevee 12s linear infinite;
+}
+
+.anim-vaporeon {
+    animation: evolucion-vaporeon 12s linear infinite;
+}
+
+.anim-jolteon {
+    animation: evolucion-jolteon 12s linear infinite;
+}
+
+.anim-flareon {
+    animation: evolucion-flareon 12s linear infinite;
+}
+
+.anim-espeon {
+    animation: evolucion-espeon 12s linear infinite;
+}
+
+.anim-umbreon {
+    animation: evolucion-umbreon 12s linear infinite;
+}
+
+.anim-leafeon {
+    animation: evolucion-leafeon 12s linear infinite;
+}
+
+.anim-glaceon {
+    animation: evolucion-glaceon 12s linear infinite;
+}
+
+.anim-sylveon {
+    animation: evolucion-sylveon 12s linear infinite;
+}
+
+@keyframes recorrido-eevee {
+    0% {
+        top: 15%;
+        left: 10%;
+    }
+
+    25% {
+        top: 15%;
+        left: 80%;
+    }
+
+    50% {
+        top: 70%;
+        left: 80%;
+    }
+
+    75% {
+        top: 70%;
+        left: 10%;
+    }
+
+    100% {
+        top: 15%;
+        left: 10%;
+    }
+}
+
+@keyframes evolucion-eevee {
+    0%, 10% {
+        opacity: 1;
+    }
+
+    11%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes evolucion-vaporeon {
+    0%, 10% {
+        opacity: 0;
+    }
+
+    11%, 20% {
+        opacity: 1;
+    }
+
+    21%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes evolucion-jolteon {
+    0%, 20% {
+        opacity: 0;
+    }
+
+    21%, 30% {
+        opacity: 1;
+    }
+
+    31%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes evolucion-flareon {
+    0%, 30% {
+        opacity: 0;
+    }
+
+    31%, 40% {
+        opacity: 1;
+    }
+
+    41%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes evolucion-espeon {
+    0%, 40% {
+        opacity: 0;
+    }
+
+    41%, 50% {
+        opacity: 1;
+    }
+
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes evolucion-umbreon {
+    0%, 50% {
+        opacity: 0;
+    }
+
+    51%, 60% {
+        opacity: 1;
+    }
+
+    61%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes evolucion-leafeon {
+    0%, 60% {
+        opacity: 0;
+    }
+
+    61%, 70% {
+        opacity: 1;
+    }
+
+    71%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes evolucion-glaceon {
+    0%, 70% {
+        opacity: 0;
+    }
+
+    71%, 80% {
+        opacity: 1;
+    }
+
+    81%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes evolucion-sylveon {
+    0%, 80% {
+        opacity: 0;
+    }
+
+    81%, 100% {
+        opacity: 1;
+    }
 }
