@@ -4,24 +4,62 @@
 <meta charset="UTF-8">
 <title>Pokémon</title>
 <link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="Resource/images.jfif">
 </head>
 <body>
+<div id="pantalla-carga">
+<div class="barra-carga-contenedor">
+<img id="gif-carga" src="Resource/images.jfif" alt="Pokémon Unite">
+<div class="barra-carga-fondo">
+<div class="barra-carga-relleno"></div>
+</div>
+</div>
+</div>
+<div class="pokebolas">
+<div class="pokebola morada"></div> 
+<div class="pokebola naranja"></div>
+</div>
 <header>
 <h1 class="titulo">Pokémon</h1>
 <p>
 Conoce los Pokémon que puedes utilizar en Pokémon Unite.
 </p>
+
 </header>
+
 <nav>
+
 <a class="menu" href="index.html">Inicio</a>
+
 <a class="menu" href="pokemon.html">Pokémon</a>
+
 </nav>
+
 <main>
+
+<section class="presentacion-pokemon">
+
+<h1>¡Elige tu Pokémon!</h1>
+
+<p>
+En Pokémon Unite existen diferentes Pokémon y cada uno tiene un rol
+diferente dentro de las batallas. Conoce los Pokémon disponibles y
+descubre cuál se adapta a tu estilo de juego.
+</p>
+
+</section>
+
+<section class="lista-pokemon">
+
+<h1>Pokémon disponibles</h1>
+
 <table class="tabla" border="1">
+
 <tr>
 <th>Rol</th>
 <th>Pokémon</th>
 </tr>
+
 <tr>
 <td>Ofensivo</td>
 <td>
@@ -33,6 +71,7 @@ Raichu de Alola, Ninetales de Alola, Yveltal, Reshiram,
 Zapdos, Typhlosion, Skeledirge, Toxtricity
 </td>
 </tr>
+
 <tr>
 <td>Defensivo</td>
 <td>
@@ -41,6 +80,7 @@ Mamoswine, Blastoise, Snorlax, Crustle, Slowbro,
 Trevenant, Vaporeon, Articuno
 </td>
 </tr>
+
 <tr>
 <td>Ágil</td>
 <td>
@@ -49,6 +89,7 @@ Zeraora, Talonflame, Absol, Gengar, Morpeko, Darkrai,
 Meowth, Leafeon, Jolteon
 </td>
 </tr>
+
 <tr>
 <td>Equilibrado</td>
 <td>
@@ -61,6 +102,7 @@ Blaziken, Sirfetch'd, Mewtwo(X), Charizard(X), Charizard(Y),
 Mega-Gyarados
 </td>
 </tr>
+
 <tr>
 <td>Auxiliar</td>
 <td>
@@ -69,9 +111,667 @@ Blissey, Eldegoss, Psyduck, Wigglytuff,
 Mr. Mime, Latias, Meganium
 </td>
 </tr>
+
 </table>
-<img src="Resource/pokemones.jfif" alt="Pokémon">
+
+</section>
+
+
+<section class="eleccion">
+
+<h1>¿Cuál es tu Pokémon favorito?</h1>
+
+<p>
+Elige uno de los Pokémon disponibles y descubre un poco más sobre él.
+</p>
+
+<div class="pokemon-eleccion">
+
+<input type="radio" name="pokemon" id="latios">
+<label for="latios">
+<strong>Latios</strong>
+<span>Pokémon ofensivo capaz de utilizar poderosos ataques especiales.</span>
+</label>
+
+<input type="radio" name="pokemon" id="armarouge">
+<label for="armarouge">
+<strong>Armarouge</strong>
+<span>Pokémon ofensivo que utiliza ataques de fuego y energía psíquica.</span>
+</label>
+
+<input type="radio" name="pokemon" id="miraidon">
+<label for="miraidon">
+<strong>Miraidon</strong>
+<span>Pokémon ofensivo que utiliza su gran poder eléctrico durante las batallas.</span>
+</label>
+
+<input type="radio" name="pokemon" id="mewtwo-y">
+<label for="mewtwo-y">
+<strong>Mewtwo(Y)</strong>
+<span>Pokémon ofensivo especializado en ataques especiales de gran alcance.</span>
+</label>
+
+<input type="radio" name="pokemon" id="inteleon">
+<label for="inteleon">
+<strong>Inteleon</strong>
+<span>Pokémon ofensivo que destaca por atacar a distancia.</span>
+</label>
+
+<input type="radio" name="pokemon" id="chandelure">
+<label for="chandelure">
+<strong>Chandelure</strong>
+<span>Pokémon ofensivo que utiliza poderosos ataques de fuego y fantasmas.</span>
+</label>
+
+<input type="radio" name="pokemon" id="dragapult">
+<label for="dragapult">
+<strong>Dragapult</strong>
+<span>Pokémon ofensivo rápido que puede atacar desde la distancia.</span>
+</label>
+
+<input type="radio" name="pokemon" id="duraludon">
+<label for="duraludon">
+<strong>Duraludon</strong>
+<span>Pokémon ofensivo capaz de causar gran daño a sus rivales.</span>
+</label>
+
+<input type="radio" name="pokemon" id="mew">
+<label for="mew">
+<strong>Mew</strong>
+<span>Pokémon ofensivo con diferentes posibilidades de ataque y movimiento.</span>
+</label>
+
+<input type="radio" name="pokemon" id="glaceon">
+<label for="glaceon">
+<strong>Glaceon</strong>
+<span>Pokémon ofensivo que utiliza ataques de tipo Hielo.</span>
+</label>
+
+<input type="radio" name="pokemon" id="delphox">
+<label for="delphox">
+<strong>Delphox</strong>
+<span>Pokémon ofensivo que utiliza poderosos ataques de fuego.</span>
+</label>
+
+<input type="radio" name="pokemon" id="espeon">
+<label for="espeon">
+<strong>Espeon</strong>
+<span>Pokémon ofensivo que utiliza sus poderes psíquicos para atacar.</span>
+</label>
+
+<input type="radio" name="pokemon" id="gardevoir">
+<label for="gardevoir">
+<strong>Gardevoir</strong>
+<span>Pokémon ofensivo especializado en ataques de tipo Psíquico y Hada.</span>
+</label>
+
+<input type="radio" name="pokemon" id="pikachu">
+<label for="pikachu">
+<strong>Pikachu</strong>
+<span>Pokémon de tipo Eléctrico conocido por almacenar electricidad en sus mejillas.</span>
+</label>
+
+<input type="radio" name="pokemon" id="greninja">
+<label for="greninja">
+<strong>Greninja</strong>
+<span>Pokémon ofensivo y veloz que utiliza ataques de tipo Agua.</span>
+</label>
+
+<input type="radio" name="pokemon" id="venusaur">
+<label for="venusaur">
+<strong>Venusaur</strong>
+<span>Pokémon ofensivo que utiliza ataques de tipo Planta y Veneno.</span>
+</label>
+
+<input type="radio" name="pokemon" id="cramorant">
+<label for="cramorant">
+<strong>Cramorant</strong>
+<span>Pokémon ofensivo que destaca por sus ataques a distancia.</span>
+</label>
+
+<input type="radio" name="pokemon" id="cinderace">
+<label for="cinderace">
+<strong>Cinderace</strong>
+<span>Pokémon ofensivo de tipo Fuego especializado en ataques a distancia.</span>
+</label>
+
+<input type="radio" name="pokemon" id="decidueye">
+<label for="decidueye">
+<strong>Decidueye</strong>
+<span>Pokémon ofensivo que utiliza ataques a distancia con gran precisión.</span>
+</label>
+
+<input type="radio" name="pokemon" id="sylveon">
+<label for="sylveon">
+<strong>Sylveon</strong>
+<span>Pokémon ofensivo de tipo Hada que utiliza ataques especiales.</span>
+</label>
+
+<input type="radio" name="pokemon" id="raichu-alola">
+<label for="raichu-alola">
+<strong>Raichu de Alola</strong>
+<span>Pokémon ofensivo que combina ataques eléctricos y poderes psíquicos.</span>
+</label>
+
+<input type="radio" name="pokemon" id="ninetales">
+<label for="ninetales">
+<strong>Ninetales de Alola</strong>
+<span>Pokémon que utiliza ataques de tipo Hielo y Hada.</span>
+</label>
+
+<input type="radio" name="pokemon" id="yveltal">
+<label for="yveltal">
+<strong>Yveltal</strong>
+<span>Pokémon ofensivo legendario que utiliza poderosos ataques de tipo Siniestro.</span>
+</label>
+
+<input type="radio" name="pokemon" id="reshiram">
+<label for="reshiram">
+<strong>Reshiram</strong>
+<span>Pokémon legendario que utiliza poderosos ataques de tipo Fuego.</span>
+</label>
+
+<input type="radio" name="pokemon" id="zapdos">
+<label for="zapdos">
+<strong>Zapdos</strong>
+<span>Pokémon legendario que utiliza poderosos ataques de tipo Eléctrico.</span>
+</label>
+
+<input type="radio" name="pokemon" id="typhlosion">
+<label for="typhlosion">
+<strong>Typhlosion</strong>
+<span>Pokémon ofensivo que utiliza intensos ataques de tipo Fuego.</span>
+</label>
+
+<input type="radio" name="pokemon" id="skeledirge">
+<label for="skeledirge">
+<strong>Skeledirge</strong>
+<span>Pokémon que utiliza ataques de tipo Fuego y Fantasma.</span>
+</label>
+
+<input type="radio" name="pokemon" id="toxtricity">
+<label for="toxtricity">
+<strong>Toxtricity</strong>
+<span>Pokémon que utiliza poderosos ataques de tipo Eléctrico y Veneno.</span>
+</label>
+
+<input type="radio" name="pokemon" id="ho-oh">
+<label for="ho-oh">
+<strong>Ho-Oh</strong>
+<span>Pokémon legendario capaz de resistir ataques y proteger a sus aliados.</span>
+</label>
+
+<input type="radio" name="pokemon" id="umbreon">
+<label for="umbreon">
+<strong>Umbreon</strong>
+<span>Pokémon defensivo que puede resistir los ataques de sus rivales.</span>
+</label>
+
+<input type="radio" name="pokemon" id="lapras">
+<label for="lapras">
+<strong>Lapras</strong>
+<span>Pokémon defensivo que ayuda a sus aliados durante las batallas.</span>
+</label>
+
+<input type="radio" name="pokemon" id="goodra">
+<label for="goodra">
+<strong>Goodra</strong>
+<span>Pokémon resistente que puede mantenerse durante largos combates.</span>
+</label>
+
+<input type="radio" name="pokemon" id="greedent">
+<label for="greedent">
+<strong>Greedent</strong>
+<span>Pokémon defensivo que destaca por su resistencia y movilidad.</span>
+</label>
+
+<input type="radio" name="pokemon" id="mamoswine">
+<label for="mamoswine">
+<strong>Mamoswine</strong>
+<span>Pokémon defensivo que utiliza ataques de tipo Hielo y Tierra.</span>
+</label>
+
+<input type="radio" name="pokemon" id="blastoise">
+<label for="blastoise">
+<strong>Blastoise</strong>
+<span>Pokémon defensivo que utiliza sus poderosos cañones de agua.</span>
+</label>
+
+<input type="radio" name="pokemon" id="snorlax">
+<label for="snorlax">
+<strong>Snorlax</strong>
+<span>Pokémon defensivo conocido por su gran resistencia.</span>
+</label>
+
+<input type="radio" name="pokemon" id="crustle">
+<label for="crustle">
+<strong>Crustle</strong>
+<span>Pokémon defensivo que utiliza su caparazón para resistir ataques.</span>
+</label>
+
+<input type="radio" name="pokemon" id="slowbro">
+<label for="slowbro">
+<strong>Slowbro</strong>
+<span>Pokémon defensivo que utiliza ataques de tipo Agua y Psíquico.</span>
+</label>
+
+<input type="radio" name="pokemon" id="trevenant">
+<label for="trevenant">
+<strong>Trevenant</strong>
+<span>Pokémon defensivo de tipo Planta y Fantasma.</span>
+</label>
+
+<input type="radio" name="pokemon" id="vaporeon">
+<label for="vaporeon">
+<strong>Vaporeon</strong>
+<span>Pokémon de tipo Agua capaz de ayudar a controlar las batallas.</span>
+</label>
+
+<input type="radio" name="pokemon" id="articuno">
+<label for="articuno">
+<strong>Articuno</strong>
+<span>Pokémon legendario que utiliza poderosos ataques de tipo Hielo.</span>
+</label>
+
+<input type="radio" name="pokemon" id="rapidash">
+<label for="rapidash">
+<strong>Rapidash de Galar</strong>
+<span>Pokémon ágil que destaca por su velocidad y movilidad.</span>
+</label>
+
+<input type="radio" name="pokemon" id="meowscarada">
+<label for="meowscarada">
+<strong>Meowscarada</strong>
+<span>Pokémon ágil que puede desplazarse rápidamente por el campo.</span>
+</label>
+
+<input type="radio" name="pokemon" id="zoroark">
+<label for="zoroark">
+<strong>Zoroark</strong>
+<span>Pokémon ágil que utiliza ilusiones y movimientos rápidos.</span>
+</label>
+
+<input type="radio" name="pokemon" id="dodrio">
+<label for="dodrio">
+<strong>Dodrio</strong>
+<span>Pokémon ágil que destaca por su gran velocidad.</span>
+</label>
+
+<input type="radio" name="pokemon" id="zeraora">
+<label for="zeraora">
+<strong>Zeraora</strong>
+<span>Pokémon ágil que utiliza ataques eléctricos y movimientos rápidos.</span>
+</label>
+
+<input type="radio" name="pokemon" id="talonflame">
+<label for="talonflame">
+<strong>Talonflame</strong>
+<span>Pokémon ágil de tipo Fuego y Volador.</span>
+</label>
+
+<input type="radio" name="pokemon" id="absol">
+<label for="absol">
+<strong>Absol</strong>
+<span>Pokémon ágil especializado en realizar ataques rápidos.</span>
+</label>
+
+<input type="radio" name="pokemon" id="gengar">
+<label for="gengar">
+<strong>Gengar</strong>
+<span>Pokémon ágil de tipo Fantasma y Veneno.</span>
+</label>
+
+<input type="radio" name="pokemon" id="morpeko">
+<label for="morpeko">
+<strong>Morpeko</strong>
+<span>Pokémon ágil que puede cambiar su forma durante el combate.</span>
+</label>
+
+<input type="radio" name="pokemon" id="darkrai">
+<label for="darkrai">
+<strong>Darkrai</strong>
+<span>Pokémon ágil relacionado con los sueños y las pesadillas.</span>
+</label>
+
+<input type="radio" name="pokemon" id="meowth">
+<label for="meowth">
+<strong>Meowth</strong>
+<span>Pokémon ágil que puede desplazarse rápidamente por el campo.</span>
+</label>
+
+<input type="radio" name="pokemon" id="leafeon">
+<label for="leafeon">
+<strong>Leafeon</strong>
+<span>Pokémon ágil de tipo Planta que destaca por su movilidad.</span>
+</label>
+
+<input type="radio" name="pokemon" id="jolteon">
+<label for="jolteon">
+<strong>Jolteon</strong>
+<span>Pokémon ágil de tipo Eléctrico que puede moverse rápidamente.</span>
+</label>
+
+<input type="radio" name="pokemon" id="dhelmise">
+<label for="dhelmise">
+<strong>Dhelmise</strong>
+<span>Pokémon equilibrado capaz de combinar resistencia y ataque.</span>
+</label>
+
+<input type="radio" name="pokemon" id="suicune">
+<label for="suicune">
+<strong>Suicune</strong>
+<span>Pokémon legendario que utiliza ataques de tipo Agua.</span>
+</label>
+
+<input type="radio" name="pokemon" id="falinks">
+<label for="falinks">
+<strong>Falinks</strong>
+<span>Pokémon equilibrado que trabaja como un grupo durante el combate.</span>
+</label>
+
+<input type="radio" name="pokemon" id="gyarados">
+<label for="gyarados">
+<strong>Gyarados</strong>
+<span>Pokémon equilibrado que destaca por su gran poder ofensivo.</span>
+</label>
+
+<input type="radio" name="pokemon" id="metagross">
+<label for="metagross">
+<strong>Metagross</strong>
+<span>Pokémon equilibrado con gran resistencia y poder de ataque.</span>
+</label>
+
+<input type="radio" name="pokemon" id="zacian">
+<label for="zacian">
+<strong>Zacian</strong>
+<span>Pokémon legendario equilibrado que utiliza su espada para atacar.</span>
+</label>
+
+<input type="radio" name="pokemon" id="urshifu">
+<label for="urshifu">
+<strong>Urshifu</strong>
+<span>Pokémon equilibrado que destaca por sus poderosos ataques.</span>
+</label>
+
+<input type="radio" name="pokemon" id="scizor">
+<label for="scizor">
+<strong>Scizor</strong>
+<span>Pokémon equilibrado que combina resistencia y poder ofensivo.</span>
+</label>
+
+<input type="radio" name="pokemon" id="tyranitar">
+<label for="tyranitar">
+<strong>Tyranitar</strong>
+<span>Pokémon equilibrado con gran resistencia y poder de ataque.</span>
+</label>
+
+<input type="radio" name="pokemon" id="buzzwole">
+<label for="buzzwole">
+<strong>Buzzwole</strong>
+<span>Pokémon equilibrado que destaca por su fuerza física.</span>
+</label>
+
+<input type="radio" name="pokemon" id="azumarill">
+<label for="azumarill">
+<strong>Azumarill</strong>
+<span>Pokémon equilibrado que combina ataques y resistencia.</span>
+</label>
+
+<input type="radio" name="pokemon" id="aegislash">
+<label for="aegislash">
+<strong>Aegislash</strong>
+<span>Pokémon equilibrado que puede alternar entre ataque y defensa.</span>
+</label>
+
+<input type="radio" name="pokemon" id="dragonite">
+<label for="dragonite">
+<strong>Dragonite</strong>
+<span>Pokémon equilibrado que combina fuerza, resistencia y movilidad.</span>
+</label>
+
+<input type="radio" name="pokemon" id="tsareena">
+<label for="tsareena">
+<strong>Tsareena</strong>
+<span>Pokémon equilibrado especializado en ataques cuerpo a cuerpo.</span>
+</label>
+
+<input type="radio" name="pokemon" id="lucario">
+<label for="lucario">
+<strong>Lucario</strong>
+<span>Pokémon equilibrado que combina velocidad, resistencia y ataques.</span>
+</label>
+
+<input type="radio" name="pokemon" id="charizard">
+<label for="charizard">
+<strong>Charizard</strong>
+<span>Pokémon equilibrado de tipo Fuego y Volador.</span>
+</label>
+
+<input type="radio" name="pokemon" id="machamp">
+<label for="machamp">
+<strong>Machamp</strong>
+<span>Pokémon equilibrado especializado en ataques físicos.</span>
+</label>
+
+<input type="radio" name="pokemon" id="garchomp">
+<label for="garchomp">
+<strong>Garchomp</strong>
+<span>Pokémon equilibrado que destaca por su fuerza en combate.</span>
+</label>
+
+<input type="radio" name="pokemon" id="empoleon">
+<label for="empoleon">
+<strong>Empoleon</strong>
+<span>Pokémon equilibrado de tipo Agua y Acero.</span>
+</label>
+
+<input type="radio" name="pokemon" id="pawmot">
+<label for="pawmot">
+<strong>Pawmot</strong>
+<span>Pokémon equilibrado que utiliza ataques eléctricos y físicos.</span>
+</label>
+
+<input type="radio" name="pokemon" id="ceruledge">
+<label for="ceruledge">
+<strong>Ceruledge</strong>
+<span>Pokémon equilibrado de tipo Fuego y Fantasma.</span>
+</label>
+
+<input type="radio" name="pokemon" id="tinkaton">
+<label for="tinkaton">
+<strong>Tinkaton</strong>
+<span>Pokémon equilibrado de tipo Hada y Acero.</span>
+</label>
+
+<input type="radio" name="pokemon" id="palkia">
+<label for="palkia">
+<strong>Palkia</strong>
+<span>Pokémon legendario capaz de controlar el espacio.</span>
+</label>
+
+<input type="radio" name="pokemon" id="solgaleo">
+<label for="solgaleo">
+<strong>Solgaleo</strong>
+<span>Pokémon legendario de tipo Psíquico y Acero.</span>
+</label>
+
+<input type="radio" name="pokemon" id="flareon">
+<label for="flareon">
+<strong>Flareon</strong>
+<span>Pokémon de tipo Fuego que utiliza poderosos ataques.</span>
+</label>
+
+<input type="radio" name="pokemon" id="quaquaval">
+<label for="quaquaval">
+<strong>Quaquaval</strong>
+<span>Pokémon equilibrado que combina ataques físicos y movilidad.</span>
+</label>
+
+<input type="radio" name="pokemon" id="feraligatr">
+<label for="feraligatr">
+<strong>Feraligatr</strong>
+<span>Pokémon equilibrado de tipo Agua con gran fuerza física.</span>
+</label>
+
+<input type="radio" name="pokemon" id="moltres">
+<label for="moltres">
+<strong>Moltres</strong>
+<span>Pokémon legendario de tipo Fuego y Volador.</span>
+</label>
+
+<input type="radio" name="pokemon" id="mimikyu">
+<label for="mimikyu">
+<strong>Mimikyu</strong>
+<span>Pokémon de tipo Fantasma y Hada que utiliza engaños para combatir.</span>
+</label>
+
+<input type="radio" name="pokemon" id="blaziken">
+<label for="blaziken">
+<strong>Blaziken</strong>
+<span>Pokémon equilibrado que combina ataques de Fuego y Lucha.</span>
+</label>
+
+<input type="radio" name="pokemon" id="sirfetchd">
+<label for="sirfetchd">
+<strong>Sirfetch'd</strong>
+<span>Pokémon equilibrado que utiliza su poderoso puerro para atacar.</span>
+</label>
+
+<input type="radio" name="pokemon" id="mewtwo-x">
+<label for="mewtwo-x">
+<strong>Mewtwo(X)</strong>
+<span>Pokémon equilibrado que destaca por sus poderosos ataques físicos.</span>
+</label>
+
+<input type="radio" name="pokemon" id="charizard-x">
+<label for="charizard-x">
+<strong>Charizard(X)</strong>
+<span>Pokémon que utiliza su gran poder ofensivo durante las batallas.</span>
+</label>
+
+<input type="radio" name="pokemon" id="charizard-y">
+<label for="charizard-y">
+<strong>Charizard(Y)</strong>
+<span>Pokémon especializado en ataques de fuego y gran alcance.</span>
+</label>
+
+<input type="radio" name="pokemon" id="mega-gyarados">
+<label for="mega-gyarados">
+<strong>Mega-Gyarados</strong>
+<span>Pokémon que destaca por su gran fuerza y resistencia.</span>
+</label>
+
+<input type="radio" name="pokemon" id="alcremie">
+<label for="alcremie">
+<strong>Alcremie</strong>
+<span>Pokémon auxiliar que ayuda a sus compañeros durante las batallas.</span>
+</label>
+
+<input type="radio" name="pokemon" id="comfey">
+<label for="comfey">
+<strong>Comfey</strong>
+<span>Pokémon auxiliar especializado en apoyar y curar a sus aliados.</span>
+</label>
+
+<input type="radio" name="pokemon" id="sableye">
+<label for="sableye">
+<strong>Sableye</strong>
+<span>Pokémon auxiliar que utiliza movimientos para molestar a sus rivales.</span>
+</label>
+
+<input type="radio" name="pokemon" id="clefable">
+<label for="clefable">
+<strong>Clefable</strong>
+<span>Pokémon auxiliar que puede ayudar y recuperar a sus aliados.</span>
+</label>
+
+<input type="radio" name="pokemon" id="hoopa">
+<label for="hoopa">
+<strong>Hoopa</strong>
+<span>Pokémon auxiliar que utiliza portales para ayudar a su equipo.</span>
+</label>
+
+<input type="radio" name="pokemon" id="blissey">
+<label for="blissey">
+<strong>Blissey</strong>
+<span>Pokémon auxiliar especializado en ayudar y proteger a sus aliados.</span>
+</label>
+
+<input type="radio" name="pokemon" id="eldegoss">
+<label for="eldegoss">
+<strong>Eldegoss</strong>
+<span>Pokémon auxiliar que puede curar y apoyar a sus compañeros.</span>
+</label>
+
+<input type="radio" name="pokemon" id="psyduck">
+<label for="psyduck">
+<strong>Psyduck</strong>
+<span>Pokémon auxiliar que utiliza poderes psíquicos durante el combate.</span>
+</label>
+
+<input type="radio" name="pokemon" id="wigglytuff">
+<label for="wigglytuff">
+<strong>Wigglytuff</strong>
+<span>Pokémon auxiliar que ayuda a controlar y apoyar al equipo.</span>
+</label>
+
+<input type="radio" name="pokemon" id="mr-mime">
+<label for="mr-mime">
+<strong>Mr. Mime</strong>
+<span>Pokémon auxiliar que utiliza barreras y movimientos de apoyo.</span>
+</label>
+
+<input type="radio" name="pokemon" id="latias">
+<label for="latias">
+<strong>Latias</strong>
+<span>Pokémon auxiliar capaz de ayudar a sus compañeros durante el combate.</span>
+</label>
+
+<input type="radio" name="pokemon" id="meganium">
+<label for="meganium">
+<strong>Meganium</strong>
+<span>Pokémon auxiliar que ayuda a sus compañeros durante las batallas.</span>
+</label>
+
+</div>
+
+</section>
+
+
+<section class="galeria-pokemon">
+
+<h1>Conoce a los Pokémon</h1>
+
+<div class="pokemon-imagen">
+
+<div class="imagen-hover">
+<img class="imagen-pokemon" src="Resource/pokemones.jfif" alt="Pokémon de Pokémon Unite">
+<img class="gif" src="Resource/gabite.gif" alt="GIF de Pokémon">
+</div>
+
+<div>
+<h2>¡Hay muchos Pokémon para elegir!</h2>
+<p>
+Cada Pokémon tiene diferentes características y puede aportar
+algo distinto durante una partida. Explora sus roles y encuentra
+el que más te guste.
+</p>
+</div>
+
+</div>
+
+</section>
+
 </main>
 
+<footer>
+
+<p>
+Conoce el juego, sus Pokémon y sus diferentes roles.
+</p>
+
+</footer>
+
 </body>
+
 </html>
