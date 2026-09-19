@@ -825,3 +825,6 @@ footer {
         pointer-events: none;
     }
 }
+section h1::first-letter {
+    color: #f5b6d2;
+}
