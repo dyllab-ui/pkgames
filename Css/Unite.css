@@ -705,3 +705,19 @@ footer {
         visibility: hidden;
     }
 }
+section li::marker {
+    color: orange;
+}
+
+.tabla tr + tr {
+    border-top: 3px solid rgba(255, 165, 0, 0.5);
+}
+
+.contenido > div {
+    transition: transform 0.3s;
+}
+
+section p ~ ul {
+    border-left: 3px solid orange;
+    padding-left: 30px;
+}
